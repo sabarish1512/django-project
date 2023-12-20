@@ -1,0 +1,27 @@
+<html>
+    <head>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}"></head>
+        <body>
+            <form method="POST" action="/emp/">
+                 {% csrf_token %}
+                 <div>
+                    <p>Employee Id:</p>{{form.eid}}
+                 </div>
+                 <div>
+                    <p>Employee Name:</p>{{form.ename}}
+                 </div>
+                 <div>
+                    <p>Employee Email:</p>{{form.eemail}}
+                 </div>
+                 <div>
+                    <p>Employee Contact:</p>{{form.econtact}}
+                 </div>
+                 <div>
+                  <p>
+                     <input type="submit" value="Submit"/>
+                  </p>
+                 </div>
+                </form>
+            </body>
+        </html>
